@@ -1,0 +1,241 @@
+/* Styling for Home Page */
+
+.app {
+  display: flex;
+}
+
+.banner {
+  flex-grow: 5;
+  width: 100%;
+  height: 84vh;
+  object-fit: cover;
+  background-image: url('Assets/DSCF2713.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+/* Banner */
+
+.content {
+  flex-grow: 2;
+}
+
+.featured-content {
+  position: center bottom;
+  display: inline-block;
+  align-self: flex-end;
+  padding: 1vh;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 4vh;
+}
+
+h1 {
+  color: white;
+  /* -webkit-text-stroke: 2px black; */
+}
+
+#listen {
+  margin-right: 1vh;
+}
+
+#performance {
+  margin-left: 1vh;
+}
+
+/* Heading Styling */
+h2 {
+  text-align:center;
+  font-family: 'Baloo Bhai', sans-serif;
+  font-size: 50px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+/* Nav styling */
+
+.navigation {
+  flex-grow: 1;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #f5f5f5;
+  border-top: 1px solid darkgrey;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 5px;
+  flex-grow: 1;
+}
+
+.facebook {
+  padding: 1vh;
+}
+
+.instagram {
+  padding: 1vh;
+}
+
+.youtube {
+  padding: 1vh;
+}
+
+/* Media Queries for banner */
+/* 30% 30%
+360 x 640
+375 x 667
+414 x 896
+601 x 962
+668 x 1024
+800 x 1280 - picture needs to be a little longer
+810 x 1280 - picture needs to be a little longer
+1024 x 768
+1280 x 800
+1280 x 1024
+1280 x 700
+1280 x 768
+1440 x 864
+1536 x 864
+1600 x 900
+1920 x 1080 - picture needs to be a little longer
+*/
+  .banner {
+      background-position: 30% 30%;
+  }
+
+
+/* About Page Styling */
+.about-header {
+  color: white;
+  padding: 3vh;
+  background-color: darkgrey;
+}
+
+.text {
+  /* padding: 3vh; */
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+}
+
+.block-1 {
+  display: flex;
+}
+
+.block-2 {
+  display: flex;
+}
+
+.block-3 {
+  display: flex;
+}
+
+.block-4 {
+  display:flex;
+}
+
+.piano-image {
+  width: 30%;
+  border-radius: 2vh;
+  flex-grow: 2;
+  margin: 2vh;
+}
+
+.voice-image {
+  width: 40%;
+  margin: 2vh;
+  border-radius: 2vh;
+  flex-grow: 2;
+}
+
+.voice-guitar-image {
+  width: 40%;
+  margin: 2vh;
+  border-radius: 2vh;
+  flex-grow: 2;
+}
+
+.guitar-image {
+  width: 30%;
+  /* margin-right: 10vh;
+  margin-left: 10vh; */
+  border-radius: 2vh;
+  flex-grow: 2;
+  margin: 2vh;
+}
+
+h3 {
+  text-align: center;
+}
+
+.par-1 {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5vh;
+}
+
+.par-2 {
+  /* margin-top: -3vh; */
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5vh;
+}
+
+.par-4 {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5vh;
+}
+
+.par-3 {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5vh;
+}
+
+.voice-image-div {
+  display: flex;
+}
+
+/* contact styling */
+
+form {
+  padding: 10vh;
+  padding-top: 8vh;
+}
+
+/* Videos Styling */
+.videos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5vh;
+}
+
+@media (min-width: 1486px) {
+  iframe {
+    width: 1280px;
+    height: 720px;
+  }
+}
+
+@media (max-width: 715px) {
+  iframe {
+    width: 320px;
+    height: 180px;
+  }
+}
