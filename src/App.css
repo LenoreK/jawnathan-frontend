@@ -68,7 +68,7 @@ h4 {
   border-top: 1px solid darkgrey;
   display: flex;
   justify-content: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   text-align: center;
   padding-top: 5px;
   padding-bottom: 10px;
