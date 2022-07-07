@@ -210,6 +210,21 @@ h3 {
   display: flex;
 }
 
+@media (max-width: 800px) {
+  .piano-image {
+    flex-grow: 1;
+  }
+  .voice-image {
+    flex-grow: 1;
+  }
+  .voice-guitar-image {
+    flex-grow: 1;
+  }
+  .guitar-image {
+    flex-grow: 1;
+  }
+}
+
 /* contact styling */
 
 form {

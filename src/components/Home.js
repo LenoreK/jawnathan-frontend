@@ -7,11 +7,11 @@ function Home() {
         <body>
             {/* Banner */}
             <div className="banner">
-                <div class="featured-content">
-                    <h1 className="display-2">Jawnathan</h1>
-                    <Button id="listen" variant="primary">Listen Now</Button>
-                    <Button id="performances" variant="primary">Upcoming Performances</Button>
-                </div>
+                    <div class="featured-content">
+                        <h1 className="display-2">Jawnathan</h1>
+                        <Button id="listen" variant="primary">Listen Now</Button>
+                        <Button id="performances" variant="primary">Upcoming Performances</Button>
+                    </div>
             </div>
         </body>
     )
