@@ -269,3 +269,75 @@ form {
     height: 180px;
   }
 }
+
+/* Perforances Page */
+
+.first-performance {
+  height: 100px;
+  background-color: lightgreen;
+  margin: 2vh;
+  border-radius: 20px;
+  margin-left: 30vh;
+  margin-right: 30vh
+}
+
+.second-performance {
+  height: 100px;
+  background-color: green;
+  margin: 2vh;
+  border-radius: 20px;
+  margin-left: 30vh;
+  margin-right: 30vh
+}
+
+.third-performance {
+  height: 100px;
+  background-color: lightgreen;
+  margin: 2vh;
+  border-radius: 20px;
+  margin-left: 30vh;
+  margin-right: 30vh
+}
+
+.fourth-performance {
+  height: 100px;
+  background-color: green;
+  margin: 2vh;
+  border-radius: 20px;
+  margin-left: 30vh;
+  margin-right: 30vh
+}
+
+.first-performance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.second-performance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.third-performance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.fourth-performance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
