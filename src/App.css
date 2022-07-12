@@ -85,7 +85,7 @@ h4 {
 }
 
 #nav-item {
-  width: 100px;
+  width: 500px;
 }
 
 .facebook {
@@ -98,6 +98,25 @@ h4 {
 
 .youtube {
   padding: 1vh;
+}
+
+.nav-item2 {
+  display: flex;
+}
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register {
+  width: 10vh;
+  align-items: center;
+}
+
+#login {
+  margin-top: -7px;
 }
 
 /* Media Queries for banner */
@@ -256,6 +275,15 @@ form {
   padding-bottom: 5vh;
 }
 
+.video-heading {
+  color: white;
+  padding: 3vh;
+  background-color: darkgrey;
+  width: 100%;
+  margin-bottom: 3vh;
+  border-bottom: 1px solid darkslategrey;
+}
+
 @media (min-width: 1486px) {
   iframe {
     width: 1280px;
@@ -272,40 +300,36 @@ form {
 
 /* Perforances Page */
 
+.performances {
+  flex-grow: 5;
+}
+
 .first-performance {
   height: 100px;
   background-color: lightgreen;
   margin: 2vh;
   border-radius: 20px;
-  margin-left: 30vh;
-  margin-right: 30vh
 }
 
 .second-performance {
   height: 100px;
-  background-color: green;
+  background-color: darkslateblue;
   margin: 2vh;
   border-radius: 20px;
-  margin-left: 30vh;
-  margin-right: 30vh
 }
 
 .third-performance {
   height: 100px;
-  background-color: lightgreen;
+  background-color: darkslateblue;
   margin: 2vh;
   border-radius: 20px;
-  margin-left: 30vh;
-  margin-right: 30vh
 }
 
 .fourth-performance {
   height: 100px;
-  background-color: green;
+  background-color: darkslateblue;
   margin: 2vh;
   border-radius: 20px;
-  margin-left: 30vh;
-  margin-right: 30vh
 }
 
 .first-performance {
@@ -340,4 +364,73 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.admin-editing {
+  display: flex;
+  margin: 2vh;
+  border-radius: 20px;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.create-performance {
+  width: 200px;
+  padding-top: 3vh;
+}
+
+.website {
+  margin-right: 20px;
+}
+
+.performance-body {
+  display: flex;
+  flex-direction:column;
+}
+
+h4 {
+  color:blue;
+}
+
+/* Music */
+.Music {
+  background-color: darkslateblue;
+  display:flex;
+  height: 84vh;
+  justify-content: center;
+}
+
+.music-heading {
+  color: white;
+  padding: 3vh;
+  background-color: darkgrey;
+  width: 100%;
+  height: 10vh;
+}
+
+/* Login Styling */
+.login-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+}
+
+.form-inner {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.submitButton {
+  width: 20%;
+  align-self:center;
+}
+
+.Register {
+  align-self: center;
+  margin-top: -2vh;
 }

@@ -2,8 +2,9 @@ import Button  from 'react-bootstrap/Button';
 
 function Performances() {
     return (
+        <div className="performance-body">
+            <h2 className="about-header">Performances</h2>
         <div className="performances">
-            <Button>Create New Performance</Button>
             {/* <div className="first-performance">
                 <div className="date">
                     <h3>{data.performance.date}</h3>
@@ -30,7 +31,10 @@ function Performances() {
                         <h1>city / state</h1>
                     </div>
                 </div>
-                <Button>Website</Button>   
+                <div>
+                <Button className="website">Check in for Updates</Button> 
+                <Button>Edit</Button>  
+                </div>
             </div>
             <div className="third-performance">
                 <div className="date">
@@ -44,7 +48,10 @@ function Performances() {
                         <h1>city / state</h1>
                     </div>
                 </div>
-                <Button>Website</Button>   
+                <div>
+                <Button className="website">Check in for Updates</Button>
+                <Button>Edit</Button>   
+                </div>
             </div>
             <div className="fourth-performance">
                 <div className="date">
@@ -58,15 +65,13 @@ function Performances() {
                         <h1>city / state</h1>
                     </div>
                 </div>
-                <Button>Website</Button>   
-            </div>
-            <div className="calendar-div">
-                <h2>Calendar</h2>
-                <div className="calendar">
-
+                <div>
+                <Button className="website">Check in for Updates</Button>
+                <Button>Edit</Button>   
                 </div>
             </div>
         </div>
+    </div>
     )
 }
 
