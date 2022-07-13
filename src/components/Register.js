@@ -3,7 +3,32 @@ import { useState } from 'react';
 import { Button, Form, Nav } from 'react-bootstrap';
 
 function Register(props) {
-    let [enteredUser, setEnteredUser] = useState('')
+    let [newUser, setNewUser] = useState('')
+    let [newPassword, setNewPassword] = useState('')
+          // Find Exisiting Users
+  useEffect(() => {
+    if(newUser) {
+        const fetchData = async () => {
+            const response = await fetch(`https://localhost:3003/`, {
+                method: "POST",
+                headers: {
+                    'Accept':'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({username: "newUser", password: 'newPassword'})
+            });
+            const content = await rawResponse.json();
+            console.log(content);
+        }
+        const resData = await response.json()
+        if (resData.id != null) {
+            setNewUser(resData)
+        } else {
+            setMessage('Not Found')
+        }
+        fetchData()
+    }}, [newUser])
+
     return (
     <Form className='login-form'>
         <div className="form-inner">

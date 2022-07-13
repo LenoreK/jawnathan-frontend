@@ -22,28 +22,19 @@ function App() {
     password: 'admin123'
   }
   
-  let [enteredUsers, setEnteredUsers] = useState('')
+  let [enteredUser, setEnteredUser] = useState('')
   let [userData, setUserData] = useState("")
+  let [enteredPassword, setEnteredPassword] = useState('')
 
-  // Find Exisiting Users
-  useEffect(() => {
-    if(enteredUsers) {
-      const fetchData = async () => {
-        const response = await fetch(`https://localhost:3003/${enteredUsers}`)
-        const resData = await response.json()
-        if (resData.id != null) {
-          setUserData(resData)
-        } else {
-          setMessage('Not Found')
-        }
-      }
-      fetchData()
-    }
-  }, [enteredUsers])
+  const handleEnteredPassword = (e, password) => {
+    e.preventDefault(
+      setEnteredPassword(password)
+    )
+  }
 
-  const handleEnteredUser = (e, userName) => {
+  const handleEnteredUser = (e, eUser) => {
     e.preventDefault()
-    setEnteredUsers(userName)
+    setEnteredUser(eUser)
   }
 
   const handleNewUser = (e, newUserName) => {
@@ -81,7 +72,7 @@ function App() {
               <Route path="/Performances" element={<Performances />}/>
               <Route path="/Shop" element={<Shop/>}/>
               <Route path="/Videos" element={<Videos />}/>
-              <Route path="/Login" element={<Login handleEnteredUser={handleEnteredUser}/>}/>
+              <Route path="/Login" element={<Login handleEnteredUser={handleEnteredUser} handleEnteredPassword={handleEnteredPassword}/>}/>
               <Route path="/Register" element={<Register handleNewUser={handleNewUser}/>}/>
             </Routes>
           </div>
