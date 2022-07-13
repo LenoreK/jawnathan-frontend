@@ -25,6 +25,9 @@ function App() {
   let [enteredUser, setEnteredUser] = useState('')
   let [userData, setUserData] = useState("")
   let [enteredPassword, setEnteredPassword] = useState('')
+  let [newPassword, setNewPassword] = useState('')
+  let [newEmail, setNewEmail] = useState('')
+  let [newUser, setNewUser] = useState('')
 
   const handleEnteredPassword = (e, password) => {
     e.preventDefault(
@@ -37,27 +40,22 @@ function App() {
     setEnteredUser(eUser)
   }
 
-  const handleNewUser = (e, newUserName) => {
-		e.preventDefault()
-    console.log(newUserName)
-		if(newUserName) {      
-      
-      let defaultPassword = newUserName.charAt(1) + newUserName.length + newUserName.charAt(newUserName.length - 1) + '*'
+  const handleNewPassword = (e, nPassword) => {
+    e.preventDefault(
+      setEnteredPassword(nPassword)
+    )
+  }
 
-			let fetchData = async () => {
-        let fetchString = API_URL	+ setUserData
-        let response = await fetch(fetchString,{
-					crossDomain:true,
-					method: 'POST',
-					headers: {'Content-Type':'application/json','Access-Control-Allow-Origin':'*','Access-Control-Allow-Methods': 'POST'},          
-          body: JSON.stringify({'user_name':newUserName,'password':defaultPassword, 'last_modified':'05/05/2022','last_modified_by':'WebSite'})
-        })
-        console.log(response)
-        setUserData(newUserName)		
-			}
-			fetchData()
-		}
-	}
+  const handleNewUser = (e, newUser) => {
+    e.preventDefault(
+      setNewUser(newUser)
+    )
+  }
+
+  const handleNewEmail = (e, email) => {
+    e.preventDefault()
+    setNewEmail(email)
+  }
 
   return (
       <Router>
@@ -73,7 +71,7 @@ function App() {
               <Route path="/Shop" element={<Shop/>}/>
               <Route path="/Videos" element={<Videos />}/>
               <Route path="/Login" element={<Login handleEnteredUser={handleEnteredUser} handleEnteredPassword={handleEnteredPassword}/>}/>
-              <Route path="/Register" element={<Register handleNewUser={handleNewUser}/>}/>
+              <Route path="/Register" element={<Register handleNewUser={handleNewUser} handleNewPassword={handleNewPassword} handleNewEmail={handleNewEmail}/>}/>
             </Routes>
           </div>
           <Footer />

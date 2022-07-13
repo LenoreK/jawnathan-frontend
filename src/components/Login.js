@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Button, Form, Nav } from 'react-bootstrap';
 
 function Login(props) {
@@ -17,20 +17,20 @@ function Login(props) {
                 },
                 body: JSON.stringify({username: "enteredUser", password: 'enteredPassword'})
             });
-            const content = await rawResponse.json();
+            const content = await Response.json();
             console.log(content);
         }
-        const resData = await response.json()
+        const resData = Response.json()
         if (resData.id != null) {
-            setUserData(resData)
+            setEnteredUser(resData)
         } else {
-            setMessage('Not Found')
+            console.log('Not Found')
         }
         fetchData()
     }}, [enteredUser])
 
     return (
-        <Form className='login-form' onSubmit={(e) => props.handleEnteredUser(e, entered)}>
+        <Form className='login-form' onSubmit={(e) => props.handleEnteredUser(e, enteredUser)}>
             <div className="form-inner">
                 <h2>Login</h2>
                 {/* Error */}
@@ -50,7 +50,8 @@ function Login(props) {
                     onChange={
                         (e) => {
                             setEnteredPassword(e.target.value)
-                        }}/>
+                        }}
+                        />
                 </Form.Group>
                 <Button className='submitButton' type="submit" variant="primary" onClick={function(e){
                     props.handleEnteredUser(e, enteredUser)
