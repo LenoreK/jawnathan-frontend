@@ -12,6 +12,7 @@ import Shop from "./components/Shop"
 import Videos from "./components/Videos"
 import Login from "./components/Login"
 import Register from "./components/Register"
+import AddGig from "./components/AddGig"
 import {useEffect, useState } from 'react';
                 
 
@@ -22,12 +23,19 @@ function App() {
     password: 'admin123'
   }
   
-  let [enteredUser, setEnteredUser] = useState('')
-  let [userData, setUserData] = useState("")
-  let [enteredPassword, setEnteredPassword] = useState('')
+  let [password, setEnteredPassword] = useState('')
   let [newPassword, setNewPassword] = useState('')
-  let [newEmail, setNewEmail] = useState('')
+  let [user, setEnteredUser] = useState('')
   let [newUser, setNewUser] = useState('')
+  let [email, setEmail] = useState('')
+  let [newEmail, setNewEmail] = useState('')
+  // let [time, setTime] = useState('')
+  let [newTime, setNewTime] = useState('')
+  let [newDate, setNewDate] = useState('')
+  let [newState, setNewState] = useState('')
+  let [newCity, setNewCity] = useState('')
+  let [newPlace, setNewPlace] = useState('')
+  let [newGig, setNewGig] = useState('')
 
   const handleEnteredPassword = (e, password) => {
     e.preventDefault(
@@ -35,15 +43,15 @@ function App() {
     )
   }
 
-  const handleEnteredUser = (e, eUser) => {
-    e.preventDefault()
-    setEnteredUser(eUser)
+  const handleNewPassword = (e, newPassword) => {
+    e.preventDefault(
+      setNewPassword(newPassword)
+    )
   }
 
-  const handleNewPassword = (e, nPassword) => {
-    e.preventDefault(
-      setEnteredPassword(nPassword)
-    )
+  const handleEnteredUser = (e, user) => {
+    e.preventDefault()
+    setEnteredUser(user)
   }
 
   const handleNewUser = (e, newUser) => {
@@ -52,9 +60,70 @@ function App() {
     )
   }
 
-  const handleNewEmail = (e, email) => {
+  const handleEmail = (e, email) => {
+    e.preventDefault(
+      setEmail(email)
+    )
+  }
+
+  const handleNewEmail = (e, newEmail) => {
     e.preventDefault()
-    setNewEmail(email)
+    setNewEmail(newEmail)
+  }
+
+  // const handleTime = (e, time) => {
+  //   e.preventDefault()
+  //   setTime(time)
+  // }
+
+  const handleNewTime = (e, newTime) => {
+    e.preventDefault()
+    setNewTime(newTime)
+  }
+
+    // const handleDate = (e, date) => {
+  //   e.preventDefault()
+  //   setDate(date)
+  // }
+
+  const handleNewDate = (e, newDate) => {
+    e.preventDefault()
+    setNewDate(newDate)
+  }
+
+      // const handlePlace = (e, place) => {
+  //   e.preventDefault()
+  //   setPlace(place)
+  // }
+
+  const handleNewPlace = (e, newPlace) => {
+    e.preventDefault()
+    setNewPlace(newPlace)
+  }
+
+      // const handleState = (e, state) => {
+  //   e.preventDefault()
+  //   setState(state)
+  // }
+
+  const handleNewState = (e, newState) => {
+    e.preventDefault()
+    setNewState(newState)
+  }
+
+  // const handleCity = (e, city) => {
+  //   e.preventDefault()
+  //   setCity(city)
+  // }
+
+  const handleNewCity = (e, newCity) => {
+    e.preventDefault()
+    setNewCity(newCity)
+  }
+
+  const handleNewGig = (e, newGig) => {
+    e.preventDefault()
+    setNewGig(newGig)
   }
 
   return (
@@ -72,6 +141,7 @@ function App() {
               <Route path="/Videos" element={<Videos />}/>
               <Route path="/Login" element={<Login handleEnteredUser={handleEnteredUser} handleEnteredPassword={handleEnteredPassword}/>}/>
               <Route path="/Register" element={<Register handleNewUser={handleNewUser} handleNewPassword={handleNewPassword} handleNewEmail={handleNewEmail}/>}/>
+              <Route path='/AddGig' element={<AddGig handleNewTime={handleNewTime} handleNewDate={handleNewDate} handleNewPlace={handleNewPlace} handleNewState={handleNewState} handleNewCity={handleNewCity} handleNewGig={handleNewGig}/>} />
             </Routes>
           </div>
           <Footer />

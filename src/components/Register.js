@@ -7,8 +7,8 @@ function Register(props) {
     let [newPassword, setNewPassword] = useState('')
     let [newEmail, setNewEmail] = useState('')
 
-          // Login a User
-  useEffect(() => {
+    // Register a User
+    function registerUser() {
     if(newUser) {
         const fetchData = async () => {
             const response = await fetch(`https://localhost:3003/`, {
@@ -19,17 +19,17 @@ function Register(props) {
                 },
                 body: JSON.stringify({username: "newUser", password: 'newPassword', email: 'newEmail'})
             });
-            const content = await Response.json();
+            const content = await response.json();
             console.log(content);
-        }
-        const resData = Response.json()
-        if (resData.id != null) {
-            setNewUser(resData)
-        } else {
-            console.log('Not Found')
+            if (content.id != null) {
+                setNewUser(content)
+                return content
+            } else {
+                console.log('Not Found')
+            }
         }
         fetchData()
-    }}, [newUser])
+    } }
 
     return (
     <Form className='login-form'>
@@ -57,9 +57,13 @@ function Register(props) {
                 }}/>
             </Form.Group>
             <Button className="submitButton" type="submit" variant="primary" onClick={function(e){
+                const res = registerUser()
+                console.log(res)
+                if (res != null) {
                     props.handleNewUser(e, newUser)
                     console.log("onClick")
                     console.log(newUser)
+                }
                     }}>Submit<Nav.Link className="link" to="/Profile"></Nav.Link>
             </Button>
         </div>

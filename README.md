@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+#Project Jawnathan-Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Reflection:
+Jawnathan-Frontend is a website where you can view Jawnathan's latest performances / music.
 
-## Available Scripts
+I built the "Jawnathan" website so that my brother would have a place to display his music. My hope was to create a website that he could use as an advertisement for his brand. When I was planning the website, there were certain things that I knew it would need. It needed a place to display his music and videos. It needed an enticing home page. It needed an about and contact page. And last of all, it needed a shop were he could sell merch in the future.
 
-In the project directory, you can run:
+When building this website, I choose to keep the design simple. I find that simple designs tends to look better in the long run. I also choose to make a backend and database so that the website could easily grow in the future. This design is fairly easy to use, and I think anyone could figure out how to naviage the page.
 
-### `npm start`
+However, the login / registration page is not obvious. The reason why I did this is because I don't really want it to be obvious. There is not much of a reason for people to login. I would need to create a better reason through something like a shop. But not that the functionality exists, it will be much easier to edit the website in the future.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+My project stands out through the css. I think the front-end is what I excell at.  I understand how to make a pretty website, but I need to learn to make those websites more functional. This project was a great learning experience for me because it taught me to be more confident in the backend. I am sure that in my next project everything will move along much fast because I have the experience.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+User-Story:
+The user must be able to login and logout of the website. At the least, the admin needs to be able to login and logout.
 
-### `npm test`
+flexgoal - there is a counter that keeps track of the amount of people attending each performance.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The user must be able to view the most recent performances.
 
-### `npm run build`
+The user must be able to visit social media sites and view the youtube videos on the site.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Flexgoal - the user can shop for t-shirts and mugs on the shop.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I need to eventually connect this website to spotify.
