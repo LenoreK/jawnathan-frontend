@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Button, Form, Nav } from 'react-bootstrap';
 
+const API_BASE = "http://localhost:3003"
+
 function Login(props) {
     let [enteredUser, setEnteredUser] = useState('')
     let [enteredPassword, setEnteredPassword] = useState('')
@@ -9,7 +11,7 @@ function Login(props) {
   useEffect(() => {
     if(enteredUser) {
         const fetchData = async () => {
-            const response = await fetch(`https://localhost:3003/`, {
+            const response = await fetch(API_BASE + "/user/:id", {
                 method: "POST",
                 headers: {
                     'Accept':'application/json',

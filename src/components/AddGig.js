@@ -2,6 +2,8 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { Button, Form, Nav } from 'react-bootstrap';
 
+const API_BASE = "http://localhost:3003"
+
 function AddGig(props) {
     let [newTime, setNewTime] = useState('')
     let [newDate, setNewDate] = useState('')
@@ -10,17 +12,17 @@ function AddGig(props) {
     let [newPlace, setNewPlace] = useState('')
     let [newGig, setNewGig] = useState('')
 
-    // Register a User
+
     function addGig() {
     if(newGig) {
         const fetchData = async () => {
-            const response = await fetch(`https://localhost:3003/`, {
+            const response = await fetch(API_BASE + "/gig", {
                 method: "POST",
                 headers: {
                     'Accept':'application/json',
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({date: "newDate", time: 'newTime', city: 'newCity', state: 'newState'})
+                body: JSON.stringify({date: "newDate", start_time: 'newTime', name: 'newPlace'})
             });
             const content = await response.json();
             console.log(content);

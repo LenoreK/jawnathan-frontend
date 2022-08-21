@@ -2,6 +2,8 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { Button, Form, Nav } from 'react-bootstrap';
 
+const API_BASE = "http://localhost:3003"
+
 function Register(props) {
     let [newUser, setNewUser] = useState('')
     let [newPassword, setNewPassword] = useState('')
@@ -11,13 +13,13 @@ function Register(props) {
     function registerUser() {
     if(newUser) {
         const fetchData = async () => {
-            const response = await fetch(`https://localhost:3003/`, {
+            const response = await fetch(API_BASE + "/user", {
                 method: "POST",
                 headers: {
                     'Accept':'application/json',
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({username: "newUser", password: 'newPassword', email: 'newEmail'})
+                body: JSON.stringify({user_name: "newUser", password: 'newPassword', email: 'newEmail'})
             });
             const content = await response.json();
             console.log(content);
